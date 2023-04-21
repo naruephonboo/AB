@@ -1,0 +1,119 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: white;
+}
+.main{
+	width: 375.20px;
+	height: 667.20px;
+	background: linear-gradient(to bottom, #4649ff,  #7978ff)
+}
+label{
+	padding: 10%;
+	color: #fff;
+	font-size: 6em;
+	justify-content: center;
+	display: flex;
+	font-weight: bold;
+}
+input{
+	width: 60%;
+	height: 30px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 25px auto;
+	padding: 10px;
+	border: none;
+	border-radius: 30px;
+	font-size: 0.7em;
+}
+button{
+	
+	width: 40%;
+	height: 60px;
+	margin:  auto;
+	display: block;
+	color: #fff;
+	background: #4649ff;
+	font-size: 1.2em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #1d1ce5;
+}
+.msg{
+	margin-top: -8%;
+
+}
+.pic1{
+	margin-top: -5%;
+	height:150px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;	
+}
+p{
+	margin-top: 10%;
+	text-align: center;
+}
+a:hover{
+    text-decoration:none;
+    color: #ede5e5; 
+}
+.topicSign{
+	padding: 10%;
+	color: #fff;
+	font-size: 4.5em;
+	justify-content: center;
+	display: flex;
+	font-weight: bold;
+}
+.msgsign{
+	margin-top: -8%;
+}
+.pic2{
+	padding: 10px;
+	margin-top: -3%;
+	margin: auto;
+	height:140px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;	
+}
+.top{
+	font-size: 3rem;
+}
+.welcome{
+	font-size: 1.2rem;
+	padding: 15px;
+}
+.signup{
+	font-size: 1.2rem;
+	padding: 15px;
+}
+.btsign{
+	width: 40%;
+	height: 60px;
+	margin:  auto;
+	display: block;
+	color: #fff;
+	background: #4649ff;
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
