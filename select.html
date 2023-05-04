@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>Select</title>
+    <script src="main.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="./photo/title.png"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js" defer></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <div class="back">
+        <button onclick="location.href='main.html'" class="btnback" ><img src="./photo/arrow.png" style="width: 100px;"></button><br><br><br>
+    </div>
+    <div class="to">
+        <img src="./photo/to2.png" style="width: 60px; margin-left: 6%; margin-top: 6%;">
+        <div style="width: 60%;">
+        <p class="set">จุดรับ</p>
+        <input type="text" id = "prub1" class="senddetail" value ="2972 Westheimer Rd. Santa Ana, Illinois 85486" onchange="chagetaxi()">
+        <p class="send">จุดส่ง</p>
+        <input type="text" id = "psong1" class="senddetail" value ="2972 Westheimer Rd. Santa Ana, Illinois 85486"><br>
+        </div>
+    </div>
+    <div style="width: 900px;">
+        <div class="posiper">
+        <img class="imcar" src="./photo/car.png">
+        <div>
+        <button class="btnper"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper2"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper3"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper4"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper5"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper6"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper7"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper8"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper9"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper10"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper11"><img class="imper" src="./photo/person.png"></button>
+        <button class="btnper12"><img class="imper" src="./photo/person.png"></button>
+        </div>
+    </div>
+    <p class="jumnuan" style="font-size: 50px; margin-left: 300px; color:#4649FF;">จำนวนผู้โดยสาร</p>
+    <div class="container">
+        <div id="increment-count">
+          <input type="image" class="add" id="add" src="./photo/add.png" />
+        </div>
+        <div class="total-count" name="Quantity" id="total-count">
+        </div>
+        <div id="decrement-count">
+          <input type="image" class="delete" id="delete" src="./photo/delete.png" />
+        </div>
+    </div>
+    <div class="sum-count" id = "sum-count">
+    <button class="continue"><a href="wait.html">Continue</a></button>
+    </div>    
+</body>
+</html>

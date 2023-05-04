@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EV bus</title>
+    <script src="main.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="./photo/title.png"/>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="s10.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a style="margin-top: 50px;"></a>
+        <img src="./photo/user.png" alt="user" width="250" style="margin-left: 35%;">
+        <a style="margin-left: 35%;">User</a>
+    
+        <a style="margin-top: 10px;"></a>
+        <a href="#"><i class="fas fa-user" style="color: #2e68cc; margin-right: 5%;"></i>About</a>
+        <a href="#"><i class="fas fa-bus" style="color: #2e68cc; margin-right: 5%;"></i>ประวัติเที่ยวรถ</a>
+        <a href="#" style="margin-top: 50%;"><i class="fas fa-question-circle" style="color: #2e68cc; margin-right: 5%;"></i>Contact</a>
+    </div>
+    <div id="myBus" class="overlay">
+        <div class="in">
+            <p class="headbus">เลือกจุดรับ-ส่งที่คุณต้องการ</p>
+        </div>
+        <c href="javascript:void(0)" class="closebtn" onclick="closeBus()">&times;</c>
+        <div class="to">
+            <img src="./photo/to2.png" style="width: 60px; height: 210px;  margin-top: 5%;">
+            <div style="width: 80%;">
+                <button type="button" id ="inrub" class="btn" style="margin-left: 4%;">
+                    <font color="#818181"> จุดรับ </font> &nbsp; เลือกป้ายที่ต้องการให้รับ
+                </button>
+                <button type="button" id ="insong1" class="btn" style="margin-left: 4%; margin-top: 6%;">
+                    <font color="#818181"> จุดส่ง </font> &nbsp; เลือกป้ายที่ต้องการให้ส่ง
+                </button>
+               
+            </div>
+        </div>
+
+        <label class="text" style="margin-top: 20px; margin-left: 30px; font-size: 30px;">จุดบริการทั้งหมด (26)</label>
+        <label class="text" style="margin-top: 20px; margin-left: 30px; font-size: 30px;">จุดบริการทั้งหมด (26)</label>
+        <div class="search" id="search-bar">
+            <input class="search-txt" type="text" placeholder="Search..." id="mySearch" onkeyup="myFunction()" />
+            <button class="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <ul id="myMenu" class="overlay-conten" style="margin-top: 20%;">
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 1`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 1 <span> 10.2 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 2`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 2 <span> 8.5 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 3`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 3 <span> 13.8  กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 4`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 4 <span> 1.5 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 5`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 5 <span> 4.3 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 6`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 6 <span> 7.4 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 7`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 7 <span> 10.6 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 8`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 8 <span> 10.2 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 9`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 9 <span> 5.6 กม.</span></a></li>
+            <li onclick="selectrub(`ป้ายรถตำแหน่งที่ 10`)"><img src="./photo/pin.png" class="pin">
+                <a href="#">ป้ายรถตำแหน่งที่ 10 <span> 4.1 กม.</span></a></li>
+
+            
+        </ul>
+
+
+
+
+        </div>
+        <div id="myBus1" class="overlay">
+            <div class="in">
+                <p class="headbus">เลือกจุดรับ-ส่งที่คุณต้องการ</p>
+            </div>
+            <c href="javascript:void(0)" class="closebtn" onclick="closeBus1()">&times;</c>
+            <div class="to">
+                <img src="./photo/to2.png" style="width: 60px; height: 210px;  margin-top: 5%;">
+                <div style="width: 80%;">
+                    <button type="button" id ="inrub1" class="btn" style="margin-left: 4%;">
+                        <font color="#818181"> จุดรับ </font> &nbsp; เลือกป้ายที่ต้องการให้รับ
+                    </button>
+                    <button type="button" id = "insong" class="btn" style="margin-left: 4%; margin-top: 6%;">
+                        <font color="#818181"> จุดส่ง </font> &nbsp; เลือกป้ายที่ต้องการให้ส่ง
+                    </button>
+                   
+                </div>
+            </div>
+    
+            <label class="text" style="margin-top: 20px; margin-left: 30px; font-size: 30px;">จุดบริการทั้งหมด (26)</label>
+            <label class="text" style="margin-top: 20px; margin-left: 30px; font-size: 30px;">จุดบริการทั้งหมด (26)</label>
+            <div class="search" id="search-bar1">
+                <input class="search-txt" type="text" placeholder="Search..." id="mySearch1" onkeyup="myFunction()" />
+                <button class="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <ul id="myMenu1" class="overlay-conten" style="margin-top: 20%;">
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 1`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 1 <span> 10.2 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 2`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 2 <span> 8.5 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 3`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 3 <span> 13.8  กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 4`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 4 <span> 1.5 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 5`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 5 <span> 4.3 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 6`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 6 <span> 7.4 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 7`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 7 <span> 10.6 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 8`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 8 <span> 10.2 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 9`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 9 <span> 5.6 กม.</span></a></li>
+                <li onclick="selectsong(`ป้ายรถตำแหน่งที่ 10`)"><img src="./photo/pin.png" class="pin">
+                    <a href="#">ป้ายรถตำแหน่งที่ 10 <span> 4.1 กม.</span></a></li>
+    
+                
+            </ul>
+    
+    
+    
+    
+            </div>
+    </div>
+
+
+
+
+    <div id="main" style="z-index: 2;">
+        <img src="./photo/logo.png" alt="Avatar" class="imgcircle" style="width:120px" onclick="openNav()">
+        <div class="content">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.672147476444!2d100.53028111490146!3d13.738288401307692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f2aae33623f%3A0x421e0643a63c2093!2z4LiI4Li44Lis4Liy4Lil4LiH4LiB4Lij4LiT4LmM4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii!5e0!3m2!1sth!2sth!4v1680350763460!5m2!1sth!2sth"
+                width="100%" height="100%" style="border:0; z-index: 0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <div class="fixed" id="shadow"><b>Select Location</b><br>
+            
+                <button id = "rub" type="button" class="btn" onclick="openBus()" value="">
+                    <font color="#818181"> จุดรับ </font> &nbsp; เลือกป้ายที่ต้องการให้รับ
+                </button>
+
+            
+                <button id = "song" type="button" class="btn" onclick="openBus1()">
+                    <font color="#818181"> จุดส่ง </font> &nbsp;เลือกป้ายที่ต้องการให้ส่ง
+                </button>
+                <button type="button" class="btnsubmit"><a href="select.html">Save Address</a></button>
+
+
+            </div>
+        </div>
+
+       
+    </div>
+
+
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.getElementById("shadow").style.backgroundColor = "hsl(0, 2%, 74%)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.backgroundColor = "white";
+            document.getElementById("shadow").style.backgroundColor = "hsl(0, 0%, 95%)";
+           
+        }
+
+        function openBus() {
+            document.getElementById("myBus").style.height = "90%";
+        }
+
+        function closeBus() {
+            document.getElementById("myBus").style.height = "0";
+        }
+
+        function openBus1() {
+            document.getElementById("myBus1").style.height = "90%";
+        }
+
+        function closeBus1() {
+            document.getElementById("myBus1").style.height = "0";
+        }
+
+
+        var searchBox = document.getElementById("search-bar");
+        var Icon = document.getElementsByClassName("submit")[0];
+        Icon.onclick = function () {
+            searchBox.classList.toggle("active");
+        }
+
+        function searchboxx() {
+            searchBox.classList.toggle("active");
+        }
+
+        // searchBox
+        function myFunction() {
+            var input, filter, ul, li, a, i, span, count;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+      
+            count = li.length;
+            for (i = 0; i < count; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        var searchBox1 = document.getElementById("search-bar1");
+        var Icon = document.getElementsByClassName("submit")[1];
+        Icon.onclick = function () {
+            searchBox1.classList.toggle("active");
+        }
+
+        // searchBox
+        function myFunction() {
+            var input, filter, ul, li, a, i, span, count;
+            input = document.getElementById("mySearch1");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu1");
+            li = ul.getElementsByTagName("li");
+      
+            count = li.length;
+            for (i = 0; i < count; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
