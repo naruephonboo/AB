@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EV bus</title>
+    <link rel="shortcut icon" type="image/jpg" href="./photo/title.png"/>
+    <!-- <link rel="shortcut icon" type="image/jpg" href="./photo/bus-solid.svg"/> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="s10.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a style="margin-top: 50px;"></a>
+        <img src="./photo/user.png" alt="user" width="250" style="margin-left: 35%;">
+        <a style="margin-left: 35%;">User</a>
+        
+        <a style="margin-top: 10px;"></a>
+        <a href="#"><i class="fas fa-user" style="color: #2e68cc; margin-right: 5%;"></i>About</a>
+        <a href="#"><i class="fas fa-bus" style="color: #2e68cc; margin-right: 5%;"></i>ประวัติเที่ยวรถ</a>
+        <a href="#" style="margin-top: 50%;"><i class="fas fa-question-circle" style="color: #2e68cc; margin-right: 5%;"></i>Contact</a>
+    </div>
+
+    <div id="myModal" class="notitaxi">
+
+      <div class="notitaxi-content">
+        <span class="notitaxi-close" onclick="taxinoticlose()">&times;</span>
+        <img src="./photo/taxi.png" alt="Avatar" class="imgcircle" style="width:200px; margin-left: 25%; margin-top: 8%; position: static;"><br>
+        <text style="margin-left: 2%;"><b style="font-family: 'Kanit', sans-serif;">เราหารถให้คุณได้แล้ว!!!</b></text>
+        <div class="text" style="margin-top: 3%; margin-left: 25%; font-size: 50px;">ทะเบียนรถ</div>
+        <div class="notitaxi-taxi" style="margin-left: 25%;"><b style="font-family: 'Kanit', sans-serif; color: #4649FF;" id="label">กข123</b>  </div>
+        <button type="button" onclick="taxinoticlose()" class="btnsubmit" style="font-size: 35px; margin-top: 5%; width: 90%; text-transform: uppercase; margin-left: 2%;">OK</button>
+      </div>
+    
+    </div>
+    
+
+
+
+    <div id="main" style="z-index: 2;">
+        <img src="./photo/logo.png" alt="Avatar" class="imgcircle" style="width:120px" onclick="openNav()">
+        <div class="content">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.672147476444!2d100.53028111490146!3d13.738288401307692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f2aae33623f%3A0x421e0643a63c2093!2z4LiI4Li44Lis4Liy4Lil4LiH4LiB4Lij4LiT4LmM4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii!5e0!3m2!1sth!2sth!4v1680350763460!5m2!1sth!2sth"
+                width="100%" height="100%" style="border:0; z-index: 0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+
+            <div class="fixed" id="shadow"><b>Select Location</b><br>
+                
+                <div class="to" style="margin-top: 1%; margin-left: 2%;">
+                    <div style="width: 81%;">
+                        <div class="text" style="margin-top: 5px;">จุดรับ</div>
+                        <!-- <input type="text" class="senddetail" id="insong2" value ="2972 Westheimer Rd. Santa Ana, Illinois 85486"> -->
+                        <input type="text" class="senddetail" id="prub" value ="2972 Westheimer Rd. Santa Ana, Illinois 85486">
+                        
+                        <p></p>
+                        <div class="text" style="margin-top: 10px;">จุดส่ง</div>
+                        <input type="text" id="psong" class="senddetail" value ="2972 Westheimer Rd. Santa Ana, Illinois 85486"><br>
+                       
+                    </div>
+                    <div style="width: 20%;">
+                        <div class="text" style="margin-top: 10px;margin-left: 10px;">ค่าโดยสาร</div>
+                        <i class="fab fa-bitcoin" style="color: #4649FF; margin-top: 10px;margin-left: 20px;"></i><text style="color: #4649FF; margin-top: 10px; font-size: 50px;" id="price">100</text>
+                    </div>
+                    
+                </div>
+                <div class="to" style="margin-top: 1%; margin-left: 2%;">
+                    <div style="width: 50%;">
+                        <div class="text" style="margin-top: 20px;" >ทะเบียนรถ</div> 
+                        <div class="taxi"><b style="font-family: 'Kanit', sans-serif;" id="label1">กข123</b>  </div>
+                    </div>
+                    <div style="width: 50%;">
+                        <div class="text" style="margin-top: 20px; margin-left: 15px;">รถมาถึงใน</div>
+                        <text style="color: #000000; margin-top: 20px; font-size: 50px; margin-top: 5px" id="time">5 - 7 นาที</text>
+                    </div>
+                    <div style="width: 40%; margin-top: 7%;">
+                       
+                        <button type="button" class="qr" id="myBtn">Scan<i class="fas fa-qrcode" style="color: #4649FF;"></i></button>
+                    </div>
+                    
+
+                    
+                </div>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    </div>
+
+    <script>
+        // Get the modal
+      var modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myTaxi");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("notitaxi-close")[0];
+      
+      // When the user clicks the button, open the modal 
+    //   btn.onclick = function() {
+    //     modal.style.display = "block";
+    //   }
+      function taxinoti() {
+        modal.style.display = "block";
+        }
+      
+      // When the user clicks on <span> (x), close the modal
+    //   span.onclick = function() {
+    //     modal.style.display = "none";
+    //   }
+
+      function taxinoticlose() {
+        modal.style.display = "none";
+        }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            // document.getElementById("main").style.marginLeft = "10%";
+            document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.getElementById("shadow").style.backgroundColor = "hsl(0, 2%, 74%)";
+            // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            // document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("main").style.backgroundColor = "white";
+            document.getElementById("shadow").style.backgroundColor = "hsl(0, 0%, 95%)";
+            // document.body.style.backgroundColor = "white";
+        }
+
+        function openBus() {
+            document.getElementById("myBus").style.height = "90%";
+        }
+
+        function closeBus() {
+            document.getElementById("myBus").style.height = "0";
+        }
+
+        // var searchBox = document.getElementById("search-bar");
+        // var Icon = document.getElementsByClassName("submit")[0];
+        // Icon.onclick = function () {
+        //     searchBox.classList.toggle("active");
+        // }
+
+        // // searchBox
+        // function myFunction() {
+        //     var input, filter, ul, li, a, i, span, count;
+        //     input = document.getElementById("mySearch");
+        //     filter = input.value.toUpperCase();
+        //     ul = document.getElementById("myMenu");
+        //     li = ul.getElementsByTagName("li");
+        //     // span = ul.getElementsByTagName("span");
+        //     // span = ul.getElementById("sp");
+        //     count = li.length;
+        //     for (i = 0; i < count; i++) {
+        //         a = li[i].getElementsByTagName("a")[0];
+        //         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        //             li[i].style.display = "";
+        //         } else {
+        //             li[i].style.display = "none";
+        //         }
+        //     }
+        // }
+
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
